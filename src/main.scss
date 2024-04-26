@@ -5,5 +5,125 @@
 body {
 	font-size: 20px;
 	font-family: $Ff-primary;
-	background-color: rgb(255, 221, 0);
+	display: grid;
+	justify-items: center;
+}
+.pingLaunch {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 40rem;
+	justify-items: center;
+	padding: 5.4rem 0 0 0;
+	&__logo {
+		margin-bottom: 2.8rem;
+	}
+	&__title {
+		font-weight: $Fw-regular;
+		color: $Clr-neutral-Gray;
+		font-size: 2.8125rem;
+		margin-bottom: 1rem;
+		& b {
+			color: $Clr-neutral-VeryDarkBlue;
+		}
+	}
+	&__subtitle {
+		color: $Clr-neutral-Gray;
+		font-size: 1.25rem;
+		font-weight: $Fw-regular;
+		margin-bottom: 2.5rem;
+	}
+	&__form {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 12.5rem;
+		gap: 1rem;
+		margin-bottom: 5.37rem;
+		&-email {
+			border: none;
+			border-radius: 1.75rem;
+			padding: 1.2rem 2rem;
+			color: $Clr-neutral-Gray;
+			font-size: 1rem;
+			font-weight: $Fw-regular;
+			width: 100%;
+			border: 1px solid $Clr-neutral-Gray;
+		}
+		&-submit {
+			border: none;
+			border-radius: 1.75rem;
+			padding: 1.2rem;
+			color: #fff;
+			font-size: 1rem;
+			font-weight: $Fw-bold;
+			background-color: $Clr-Primary-Blue;
+		}
+	}
+	&__dashboard {
+		width: 40rem;
+		margin-bottom: 4.5rem;
+	}
+	&__footer {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.7rem;
+		place-items: center;
+		margin-bottom: 1.7rem;
+		&-socialIcons {
+			display: grid;
+			place-items: center;
+			img {
+				height: 16px;
+			}
+			height: 32px;
+			width: 32px;
+			border: 1px solid $Clr-secondary-PaleBlue;
+			border-radius: 50%;
+		}
+	}
+	&__copyright {
+		color: $Clr-neutral-Gray;
+		font-size: 0.75rem;
+		font-weight: $Fw-regular;
+	}
+}
+@media (max-width: 750px) {
+	.pingLaunch {
+		padding: 10.63rem 0;
+		&__logo {
+			margin-bottom: 4.68rem;
+			height: 2rem;
+		}
+		&__subtitle {
+			margin-bottom: 4rem;
+		}
+		&__form {
+			grid-template-columns: 1fr;
+			padding: 0 2rem 0 2rem;
+			margin-bottom: 8.5rem;
+			&-email,
+			&-submit {
+				padding: 1.3rem 4rem;
+				border-radius: 2.4375rem;
+				font-size: 1.5rem;
+			}
+		}
+		&__dashboard {
+			margin-bottom: 15.06rem;
+		}
+		&__footer {
+			margin-bottom: 3.63rem;
+			//MODIFICAR//
+			&-socialIcons {
+				display: grid;
+				place-items: center;
+				img {
+					height: 16px;
+				}
+				height: 32px;
+				width: 32px;
+				border: 1px solid $Clr-secondary-PaleBlue;
+				border-radius: 50%;
+			}
+		}
+	}
 }

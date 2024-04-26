@@ -13,6 +13,41 @@
 		/>
 	</head>
 	<body>
+		<article class="pingLaunch">
+			<img class="pingLaunch__logo" src="../src/images/logo.svg" alt="logo" />
+			<h1 class="pingLaunch__title">We are launching <b>soon!</b></h1>
+			<p class="pingLaunch__subtitle">Subscribe and get notified</p>
+			<form action="submit" class="pingLaunch__form" name="pingForm">
+				<label for="email" style="display: none"></label>
+				<span class="pingLaunch__form-email-container"
+					><input
+						required
+						class="pingLaunch__form-email"
+						placeholder="Your email address..."
+						type="email"
+				/></span>
+				<button type="submit" class="pingLaunch__form-submit">Notify Me</button>
+			</form>
+			<img
+				src="../src/images/illustration-dashboard.png"
+				alt="dashboard"
+				class="pingLaunch__dashboard"
+			/>
+			<section class="pingLaunch__footer">
+				<div class="pingLaunch__footer-socialIcons">
+					<img src="../src/images/icons8-facebook.svg" alt="facebook" />
+				</div>
+				<div class="pingLaunch__footer-socialIcons">
+					<img src="../src/images/icons8-twitter.svg" alt="twitter" />
+				</div>
+				<div class="pingLaunch__footer-socialIcons">
+					<img src="../src/images/icons8-instagram.svg" alt="instagram" />
+				</div>
+			</section>
+			<p class="pingLaunch__copyright">
+				© Copyright Ping. All rights reserved.
+			</p>
+		</article>
 		<script src="bundle.js"></script>
 	</body>
 </html>
