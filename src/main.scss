@@ -7,6 +7,7 @@ body {
 	font-family: $Ff-primary;
 	display: grid;
 	justify-items: center;
+	background-color: aqua;
 }
 .pingLaunch {
 	display: grid;
@@ -41,21 +42,36 @@ body {
 		&-email {
 			border: none;
 			border-radius: 1.75rem;
-			padding: 1.2rem 2rem;
+			padding: 1rem 2rem;
 			color: $Clr-neutral-Gray;
 			font-size: 1rem;
 			font-weight: $Fw-regular;
 			width: 100%;
 			border: 1px solid $Clr-neutral-Gray;
+			&:focus {
+				outline: none;
+			}
+			&:invalid {
+				border: 1px solid $Clr-secondary-LightRed;
+			}
+			&-error {
+				display: none;
+				color: $Clr-secondary-LightRed;
+				font-size: 0.75rem;
+				font-style: italic;
+				font-weight: $Fw-medium;
+				margin-left: 32px;
+			}
 		}
 		&-submit {
 			border: none;
 			border-radius: 1.75rem;
-			padding: 1.2rem;
+			padding: 1rem;
 			color: #fff;
 			font-size: 1rem;
 			font-weight: $Fw-bold;
 			background-color: $Clr-Primary-Blue;
+			cursor: pointer;
 		}
 	}
 	&__dashboard {
@@ -71,8 +87,17 @@ body {
 		&-socialIcons {
 			display: grid;
 			place-items: center;
-			img {
+			&-facebook {
 				height: 16px;
+				fill: $Clr-Primary-Blue;
+			}
+			&-twitter {
+				height: 16px;
+				fill: $Clr-Primary-Blue;
+			}
+			&-instagram {
+				height: 16px;
+				fill: $Clr-Primary-Blue;
 			}
 			height: 32px;
 			width: 32px;
@@ -106,24 +131,33 @@ body {
 				border-radius: 2.4375rem;
 				font-size: 1.5rem;
 			}
+			&-email-error {
+				margin-bottom: 2rem;
+				font-size: 20px;
+			}
 		}
 		&__dashboard {
 			margin-bottom: 15.06rem;
 		}
 		&__footer {
 			margin-bottom: 3.63rem;
-			//MODIFICAR//
 			&-socialIcons {
-				display: grid;
-				place-items: center;
-				img {
-					height: 16px;
+				&-facebook {
+					height: 64px;
 				}
-				height: 32px;
-				width: 32px;
-				border: 1px solid $Clr-secondary-PaleBlue;
+				height: 64px;
+				width: 64px;
+				border: 2px solid $Clr-secondary-PaleBlue;
 				border-radius: 50%;
 			}
 		}
+		&__copyright {
+			font-size: 1.25rem;
+		}
 	}
+}
+.svg {
+	fill: red;
+	height: 300px;
+	border: 2px solid yellow;
 }

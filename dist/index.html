@@ -17,16 +17,23 @@
 			<img class="pingLaunch__logo" src="../src/images/logo.svg" alt="logo" />
 			<h1 class="pingLaunch__title">We are launching <b>soon!</b></h1>
 			<p class="pingLaunch__subtitle">Subscribe and get notified</p>
-			<form action="submit" class="pingLaunch__form" name="pingForm">
+			<form
+				novalidate
+				action="submit"
+				class="pingLaunch__form"
+				name="notifyForm"
+			>
 				<label for="email" style="display: none"></label>
-				<span class="pingLaunch__form-email-container"
-					><input
-						required
-						class="pingLaunch__form-email"
-						placeholder="Your email address..."
-						type="email"
-				/></span>
-				<button type="submit" class="pingLaunch__form-submit">Notify Me</button>
+				<input
+					class="pingLaunch__form-email"
+					placeholder="Your email address..."
+					type="text"
+					oninput="this.type='email'"
+				/>
+				<p class="pingLaunch__form-email-error">
+					Please provide a valid email address
+				</p>
+				<button class="pingLaunch__form-submit">Notify Me</button>
 			</form>
 			<img
 				src="../src/images/illustration-dashboard.png"
@@ -34,20 +41,76 @@
 				class="pingLaunch__dashboard"
 			/>
 			<section class="pingLaunch__footer">
-				<div class="pingLaunch__footer-socialIcons">
-					<img src="../src/images/icons8-facebook.svg" alt="facebook" />
-				</div>
-				<div class="pingLaunch__footer-socialIcons">
-					<img src="../src/images/icons8-twitter.svg" alt="twitter" />
-				</div>
-				<div class="pingLaunch__footer-socialIcons">
-					<img src="../src/images/icons8-instagram.svg" alt="instagram" />
-				</div>
+				<a class="pingLaunch__footer-socialIcons" href="">
+					<svg class="pingLaunch__footer-socialIcons-facebook">
+						<use href="#iconFacebook"></use>
+					</svg>
+				</a>
+				<a class="pingLaunch__footer-socialIcons" href="">
+					<svg class="pingLaunch__footer-socialIcons-twitter">
+						<use href="#iconTwitter"></use>
+					</svg>
+				</a>
+				<a class="pingLaunch__footer-socialIcons" href="">
+					<svg class="pingLaunch__footer-socialIcons-instagram">
+						<use href="#iconInstagram"></use>
+					</svg>
+				</a>
 			</section>
 			<p class="pingLaunch__copyright">
 				© Copyright Ping. All rights reserved.
 			</p>
 		</article>
+		<svg width="64" height="64">
+			<symbol id="iconFacebook" viewBox=" 0 0 64 64">
+				<!-- <path
+					fill="#0866ff"
+					d="M 64,32 C 64,14.326444 49.673556,0 32,0 14.326444,0 0,14.326444 0,32 0,47.007937 10.331788,59.599214 24.269705,63.058232 V 41.778546 H 17.671041 V 32 h 6.598664 v -4.213438 c 0,-10.892574 4.92888,-15.940904 15.621533,-15.940904 2.028133,0 5.526129,0.398586 6.957013,0.795914 v 8.86444 c -0.755677,-0.07921 -2.067112,-0.11945 -3.69666,-0.11945 -5.246994,0 -7.275127,1.987898 -7.275127,7.155678 V 32 h 10.452495 l -1.795521,9.778546 H 35.876464 V 63.76613 C 51.721807,61.852417 64,48.360864 64,32 Z"
+					id="path1"
+					style="stroke-width: 0.125737"
+				/> -->
+				<path
+					d="M 44.533438,41.778546 46.328959,32 H 35.876464 v -3.45776 c 0,-5.16778 2.028133,-7.155678 7.275127,-7.155678 1.629548,0 2.940983,0.04024 3.69666,0.11945 v -8.86444 c -1.430884,-0.397328 -4.92888,-0.795914 -6.957013,-0.795914 -10.692653,0 -15.621533,5.049588 -15.621533,15.940904 V 32 h -6.598664 v 9.778546 h 6.598664 V 63.058232 C 26.745462,63.671827 29.334381,64 32,64 c 1.312692,0 2.605265,-0.08047 3.876464,-0.23387 V 41.778546 Z"
+					id="path2"
+					style="stroke-width: 0.125737"
+				/>
+			</symbol>
+		</svg>
+		<svg width="64" height="64">
+			<symbol id="iconTwitter" viewBox=" 0 0 64 64">
+				<path
+					d="M 64,6.1560709 C 61.644398,7.2021845 59.114034,7.9061575 56.458136,8.2236837 59.170647,6.5991308 61.250567,4.026922 62.230222,0.95996308 59.694935,2.4639052 56.883966,3.5567863 53.89085,4.1475328 51.495866,1.5950156 48.084304,0 44.30845,0 37.057036,0 31.179108,5.8803892 31.179108,13.129341 c 0,1.028884 0.11815,2.033153 0.33968,2.990654 C 20.607207,15.573555 10.933733,10.345448 4.4552133,2.3999077 3.327872,4.3395254 2.6805123,6.5942079 2.6805123,9.0039614 c 0,4.5536706 2.3162186,8.5732086 5.8385447,10.9263486 -2.1513019,-0.06892 -4.1770702,-0.659667 -5.9468482,-1.641783 0,0.05661 0,0.108304 0,0.164917 0,6.362832 4.5241336,11.669705 10.5325182,12.873351 -1.100266,0.300296 -2.262067,0.46029 -3.4607902,0.46029 -0.8442752,0 -1.6688589,-0.08369 -2.4688282,-0.233837 1.6713204,5.215799 6.5203644,9.013807 12.2653744,9.119649 -4.492135,3.522326 -10.1534556,5.621938 -16.3070651,5.621938 -1.0584208,0 -2.1045344,-0.06154 -3.1334179,-0.184608 5.8114688,3.724164 12.710896,5.897619 20.127226,5.897619 24.151686,0 37.354871,-20.006615 37.354871,-37.357333 0,-0.568593 -0.01231,-1.134725 -0.03692,-1.698396 C 60.012461,11.09865 62.240068,8.7873543 64,6.1560709 Z"
+					id="path1"
+					style="stroke-width: 2.46144"
+				/>
+			</symbol>
+		</svg>
+		<svg width="64px" height="64px">
+			<symbol id="iconInstagram" viewBox=" 0 0 64 64">
+				<path
+					d="M 19.368421,0 C 8.7012884,0 0,8.7012884 0,19.368421 V 44.631579 C 0,
+								55.29728 8.7009853,64 19.368421,64 H 44.631579 C 55.297583,64 64,
+								55.297583 64,44.631579 V 19.368421 C 64,8.7009853 55.29728,0 44.631579,
+								 0 Z m 0,5.0526316 h 25.263158 c 7.93472,0 14.315789,6.3794354 14.315789,
+								14.3157894 v 25.263158 c 0,7.934417 -6.381372,14.315789 -14.315789,
+								14.315789 H 19.368421 c -7.936354,0 -14.3157894,-6.381069 -14.3157894,
+								-14.315789 V 19.368421 c 0,-7.936657 6.3791324,-14.3157894 14.3157894,
+								-14.3157894 z m 29.473684,6.7368424 c -1.861052,0 -3.368421,1.507368 -3.368421,
+								3.368421 0,1.861052 1.507369,3.368421 3.368421,3.368421 1.861053,0 3.368421,
+								-1.507369 3.368421,-3.368421 0,-1.861053 -1.507368,-3.368421 -3.368421,
+								-3.368421 z M 32,15.157895 c -9.271276,0 -16.842105,7.570829 -16.842105,
+								16.842105 0,9.271276 7.570829,16.842105 16.842105,16.842105 9.271276,
+								0 16.842105,-7.570829 16.842105,-16.842105 0,-9.271276 -7.570829,
+								-16.842105 -16.842105,-16.842105 z m 0,5.052631 c 6.540093,0 11.789474,
+								5.249381 11.789474,11.789474 0,6.540093 -5.249381,11.789474 -11.789474,
+								11.789474 -6.540093,0 -11.789474,-5.249381 -11.789474,-11.789474 0,
+								-6.540093 5.249381,-11.789474 11.789474,-11.789474 z"
+					id="path1"
+					style="stroke-width: 1.68421"
+				/>
+			</symbol>
+		</svg>
+
 		<script src="bundle.js"></script>
 	</body>
 </html>
