@@ -7,6 +7,7 @@ let emailError = document.querySelector('.pingLaunch__form-email-error');
 let iconContainer = document.querySelectorAll('.iconContainer-active');
 
 submitButton.addEventListener('click', (e) => {
+	if (!emailInput.value) return;
 	if (!emailInput.checkValidity()) {
 		e.preventDefault();
 		emailError.style = 'display: block';
