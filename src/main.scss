@@ -7,7 +7,6 @@ body {
 	font-family: $Ff-primary;
 	display: grid;
 	justify-items: center;
-	background-color: aqua;
 }
 .pingLaunch {
 	display: grid;
@@ -40,6 +39,9 @@ body {
 		gap: 1rem;
 		margin-bottom: 5.37rem;
 		&-email {
+			&-container {
+				position: relative;
+			}
 			border: none;
 			border-radius: 1.75rem;
 			padding: 1rem 2rem;
@@ -61,6 +63,8 @@ body {
 				font-style: italic;
 				font-weight: $Fw-medium;
 				margin-left: 32px;
+				position: absolute;
+				bottom: -20px;
 			}
 		}
 		&-submit {
@@ -87,22 +91,16 @@ body {
 		&-socialIcons {
 			display: grid;
 			place-items: center;
-			&-facebook {
-				height: 16px;
-				fill: $Clr-Primary-Blue;
-			}
-			&-twitter {
-				height: 16px;
-				fill: $Clr-Primary-Blue;
-			}
-			&-instagram {
-				height: 16px;
-				fill: $Clr-Primary-Blue;
-			}
 			height: 32px;
 			width: 32px;
 			border: 1px solid $Clr-secondary-PaleBlue;
 			border-radius: 50%;
+			&-facebook,
+			&-twitter,
+			&-instagram {
+				height: 16px;
+				fill: $Clr-Primary-Blue;
+			}
 		}
 	}
 	&__copyright {
@@ -125,6 +123,9 @@ body {
 			grid-template-columns: 1fr;
 			padding: 0 2rem 0 2rem;
 			margin-bottom: 8.5rem;
+			&-email {
+				margin-bottom: 5rem;
+			}
 			&-email,
 			&-submit {
 				padding: 1.3rem 4rem;
@@ -134,6 +135,7 @@ body {
 			&-email-error {
 				margin-bottom: 2rem;
 				font-size: 20px;
+				bottom: 25px;
 			}
 		}
 		&__dashboard {
@@ -142,8 +144,10 @@ body {
 		&__footer {
 			margin-bottom: 3.63rem;
 			&-socialIcons {
-				&-facebook {
-					height: 64px;
+				&-facebook,
+				&-twitter,
+				&-instagram {
+					height: 32px;
 				}
 				height: 64px;
 				width: 64px;
@@ -155,9 +159,4 @@ body {
 			font-size: 1.25rem;
 		}
 	}
-}
-.svg {
-	fill: red;
-	height: 300px;
-	border: 2px solid yellow;
 }

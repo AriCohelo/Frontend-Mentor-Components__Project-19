@@ -24,15 +24,19 @@
 				name="notifyForm"
 			>
 				<label for="email" style="display: none"></label>
-				<input
-					class="pingLaunch__form-email"
-					placeholder="Your email address..."
-					type="text"
-					oninput="this.type='email'"
-				/>
-				<p class="pingLaunch__form-email-error">
-					Please provide a valid email address
-				</p>
+				<div class="pingLaunch__form-email-container">
+					<input
+						class="pingLaunch__form-email"
+						placeholder="Your email address..."
+						type="text"
+						id="email"
+						autocomplete="email"
+						oninput="this.type='email'"
+					/>
+					<p class="pingLaunch__form-email-error">
+						Please provide a valid email address
+					</p>
+				</div>
 				<button class="pingLaunch__form-submit">Notify Me</button>
 			</form>
 			<img
@@ -41,18 +45,18 @@
 				class="pingLaunch__dashboard"
 			/>
 			<section class="pingLaunch__footer">
-				<a class="pingLaunch__footer-socialIcons" href="">
-					<svg class="pingLaunch__footer-socialIcons-facebook">
+				<a class="pingLaunch__footer-socialIcons iconContainer-active" href="">
+					<svg class="pingLaunch__footer-socialIcons-facebook svgIcon-active">
 						<use href="#iconFacebook"></use>
 					</svg>
 				</a>
-				<a class="pingLaunch__footer-socialIcons" href="">
-					<svg class="pingLaunch__footer-socialIcons-twitter">
+				<a class="pingLaunch__footer-socialIcons iconContainer-active" href="">
+					<svg class="pingLaunch__footer-socialIcons-twitter svgIcon-active">
 						<use href="#iconTwitter"></use>
 					</svg>
 				</a>
-				<a class="pingLaunch__footer-socialIcons" href="">
-					<svg class="pingLaunch__footer-socialIcons-instagram">
+				<a class="pingLaunch__footer-socialIcons iconContainer-active" href="">
+					<svg class="pingLaunch__footer-socialIcons-instagram svgIcon-active">
 						<use href="#iconInstagram"></use>
 					</svg>
 				</a>
@@ -77,7 +81,7 @@
 			</symbol>
 		</svg>
 		<svg width="64" height="64">
-			<symbol id="iconTwitter" viewBox=" 0 0 64 64">
+			<symbol id="iconTwitter" viewBox=" 0 -7 64 64">
 				<path
 					d="M 64,6.1560709 C 61.644398,7.2021845 59.114034,7.9061575 56.458136,8.2236837 59.170647,6.5991308 61.250567,4.026922 62.230222,0.95996308 59.694935,2.4639052 56.883966,3.5567863 53.89085,4.1475328 51.495866,1.5950156 48.084304,0 44.30845,0 37.057036,0 31.179108,5.8803892 31.179108,13.129341 c 0,1.028884 0.11815,2.033153 0.33968,2.990654 C 20.607207,15.573555 10.933733,10.345448 4.4552133,2.3999077 3.327872,4.3395254 2.6805123,6.5942079 2.6805123,9.0039614 c 0,4.5536706 2.3162186,8.5732086 5.8385447,10.9263486 -2.1513019,-0.06892 -4.1770702,-0.659667 -5.9468482,-1.641783 0,0.05661 0,0.108304 0,0.164917 0,6.362832 4.5241336,11.669705 10.5325182,12.873351 -1.100266,0.300296 -2.262067,0.46029 -3.4607902,0.46029 -0.8442752,0 -1.6688589,-0.08369 -2.4688282,-0.233837 1.6713204,5.215799 6.5203644,9.013807 12.2653744,9.119649 -4.492135,3.522326 -10.1534556,5.621938 -16.3070651,5.621938 -1.0584208,0 -2.1045344,-0.06154 -3.1334179,-0.184608 5.8114688,3.724164 12.710896,5.897619 20.127226,5.897619 24.151686,0 37.354871,-20.006615 37.354871,-37.357333 0,-0.568593 -0.01231,-1.134725 -0.03692,-1.698396 C 60.012461,11.09865 62.240068,8.7873543 64,6.1560709 Z"
 					id="path1"
